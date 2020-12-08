@@ -8,13 +8,25 @@
     src="https://code.jquery.com/jquery-3.5.1.min.js"
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
     crossorigin="anonymous"></script>
+    <style>
+        .a123{
+            background-color: antiquewhite;
+            /* display: flex; */
+            margin-left: 40%;
+            margin-top: 50px;
+            /* justify-content: center; */
+        }
+    </style>
 </head>
-<body>
-    Add Task<input type="text" style="width: 15%;" id="inp"><input type="button" value="Add Task" id="add">
+<body style="background-color: antiquewhite;">
+    <div class="a123">
+        <h2>TO DO LIST</h2>
+    Add Task<input type="text" style="width: 15%;" id="inp" required="true"><input type="button" value="Add Task" id="add">
     <h3>ToDo</h3>
     <ul id="Incomplete"></ul>
     <h3>Completed task</h3>
     <ul id="Completed"></ul>
+    </div>
     <script src="min.js"></script>
 </body>
 </html>
