@@ -21,9 +21,12 @@ $("document").ready(function(){
             var f=arr[j];
             if(x2==val1){
                 $(`#con${j}`).html($(`#inp${j}`).val());
+                $(`#inp${j}`).val("");
             }
+            else{
             var c11= $(`#inp${j}`);
             c11.val($(`#con${j}`).html());
+            }
             x2=val1;
         });
         $(".delC").click(function(){
@@ -36,17 +39,13 @@ $("document").ready(function(){
             var val3=this.id;
             var j=val3[val3.length-1];
             var ch1=$(`#check${j}`);
-            console.log(val3,'QAWDS');
             if(ch1.is(':checked')){
                 var z22= $(`#ulli${j}`)
                 z22.appendTo('#Completed');
             }
             else{
-                var y11=$("#Incomplete");
-                var z22=$(`#ulli${j}`);
-                var y12=y11.html()+`<li id="ulli${j}">`+z22.html()+`</li>`;
-                y11.html(y12);
-                $(`#Completed #ulli${j}`).remove();
+                var z22= $(`#ulli${j}`);
+                z22.appendTo('#Incomplete');
             }
         });
     });
