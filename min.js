@@ -15,7 +15,9 @@ $("document").ready(function(){
         var y1=y.html()+`<li id="ulli${i}">`+z+content+y2+"</li>";
         y.html(y1);
         i=i+1;
-        $(".editC").click(function(){
+        $(".editC").unbind().click(function(){
+            // debugger;
+            // alert('aesfaes');
             var val1=this.id;
             var j=val1[val1.length-1];
             var f=arr[j];
@@ -29,13 +31,13 @@ $("document").ready(function(){
             }
             x2=val1;
         });
-        $(".delC").click(function(){
+        $(".delC").unbind().click(function(){
             var val2=this.id;
             var j=val2[val2.length-1];
             console.log(j);
             $(`#ulli${j}`).remove();
         });
-        $(".chkB").click(function(){
+        $(".chkB").unbind().click(function(){
             var val3=this.id;
             var j=val3[val3.length-1];
             var ch1=$(`#check${j}`);
