@@ -19,7 +19,7 @@ $("document").ready(function(){
             // debugger;
             // alert('aesfaes');
             var val1=this.id;
-            var j=val1[val1.length-1];
+            var j=val1.substring(4,val1.length);
             var f=arr[j];
             if(x2==val1){
                 $(`#con${j}`).html($(`#inp${j}`).val());
@@ -33,13 +33,13 @@ $("document").ready(function(){
         });
         $(".delC").unbind().click(function(){
             var val2=this.id;
-            var j=val2[val2.length-1];
+            var j=val2.substring(6,val2.length);
             console.log(j);
             $(`#ulli${j}`).remove();
         });
         $(".chkB").unbind().click(function(){
             var val3=this.id;
-            var j=val3[val3.length-1];
+            var j=val3.substring(5,val3.length);
             var ch1=$(`#check${j}`);
             if(ch1.is(':checked')){
                 var z22= $(`#ulli${j}`)
