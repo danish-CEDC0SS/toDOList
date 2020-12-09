@@ -6,7 +6,7 @@ $("document").ready(function(){
         arr[i]=x.val();
         var y=$("#Incomplete");
         var z=`<input type='checkbox' id='check${i}' class="chkB" >`
-        var inp1=`<input type="text" style="width: 20%;" id="inp${i}">`
+        var inp1=`<input type="text" style="width: 20%;" id="inp${i}" readonly>`
         var btn1=`<input type="button" value="Edit" id="edit${i}" class="editC">`
         var btn2=`<input type="button" value="Delete" id="delete${i}" class="delC">`
         var y2=inp1+btn1+btn2;
@@ -21,15 +21,19 @@ $("document").ready(function(){
             var val1=this.id;
             var j=val1.substring(4,val1.length);
             var f=arr[j];
+            $(`#inp${j}`).attr('readonly',false);
             if(x2==val1){
                 $(`#con${j}`).html($(`#inp${j}`).val());
                 $(`#inp${j}`).val("");
+                $(`#inp${j}`).attr('readonly',true);
+                x2='qw';
             }
             else{
             var c11= $(`#inp${j}`);
             c11.val($(`#con${j}`).html());
-            }
             x2=val1;
+            }
+            
         });
         $(".delC").unbind().click(function(){
             var val2=this.id;
