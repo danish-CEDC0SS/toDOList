@@ -16,8 +16,6 @@ $("document").ready(function(){
         y.html(y1);
         i=i+1;
         $(".editC").unbind().click(function(){
-            // debugger;
-            // alert('aesfaes');
             var val1=this.id;
             var j=val1.substring(4,val1.length);
             var f=arr[j];
@@ -46,12 +44,14 @@ $("document").ready(function(){
             var j=val3.substring(5,val3.length);
             var ch1=$(`#check${j}`);
             if(ch1.is(':checked')){
-                var z22= $(`#ulli${j}`)
+                var z22= $(`#ulli${j}`);
                 z22.appendTo('#Completed');
+                x2="QWW";$(`#inp${j}`).val("");
             }
             else{
                 var z22= $(`#ulli${j}`);
                 z22.appendTo('#Incomplete');
+                x2="QWEW";$(`#inp${j}`).val("");
             }
         });
     });
